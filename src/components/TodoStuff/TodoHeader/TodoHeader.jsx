@@ -20,20 +20,18 @@ const TodoHeader = () => {
   };
   const [theme, setTheme] = useState(defaultTheme());
 
-  useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme);
-  }, [theme]);
+  document.documentElement.setAttribute("data-theme", theme);
 
   const handleThemeSwitch = () => {
-    let switchTheme = (theme === "dark" ? "light" : "dark")
+    let switchTheme = theme === "dark" ? "light" : "dark";
     setTheme(switchTheme);
     localStorage.setItem("theme", switchTheme);
   };
 
   return (
-    <div>
+    <div className="todo-header">
       <h2>TODO</h2>
-      {theme === "dark" ? (
+      {theme == "dark" ? (
         <SunIcon onClick={handleThemeSwitch} />
       ) : (
         <MonnIcon onClick={handleThemeSwitch} />
