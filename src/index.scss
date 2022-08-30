@@ -1,0 +1,40 @@
+
+:root[data-theme="light"] {
+  ---bg-color: hsl(0, 0%, 98%);
+  --color-surface: hsl(0, 0%, 100%);
+  --color-border: #E3E4F1;
+  --color-text-active: hsl(235, 19%, 35%);
+  --color-text-completed: hsl(233, 11%, 84%);
+  --color-text: hsl(235, 9%, 61%);
+  --box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+  --header-bg-image: url("./assets/images/bg-desktop-light.jpg")
+
+}
+:root[data-theme="dark"] {
+  ---bg-color: hsl(235, 21%, 11%);
+  --color-surface: hsl(235, 24%, 19%);
+  --color-border: #393A4B;
+  --color-text-active: hsl(234, 39%, 85%);
+  --completed-text-color: hsl(233, 14%, 35%);
+  --color-text: hsl(235, 16%, 43%);
+  --box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.5);
+  --header-bg-image: url("./assets/images/bg-desktop-dark.jpg")
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  transition: background 1s ease;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(---bg-color);
+  background-image: var(--header-bg-image);
+  background-repeat: no-repeat;
+}
+
