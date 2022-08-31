@@ -24,23 +24,19 @@ const Todos = () => {
 
   const filterTodos = () => {
     let copy = todosData;
-    if(filterType == "all"){
-      return copy
-    } else if(filterType == 'active'){
-      return copy.filter(todo => todo.complete)
-    } else if(filterType == "completed"){
-      return copy.filter(todo => todo.complete)
 
-    }
-}
+    return filterType === "all"
+      ? copy
+      : filterType === "active"
+      ? copy.filter((todo) => !todo.completed)
+      : filterType === "completed"
+      ? copy.filter((todo) => todo.completed)
+      : copy;
+  };
 
   useEffect(() => {
-    let copy = filterTodos()
-    setTodosToRender(copy)
-  }, [filterType]);
-
-
-
+    setTodosToRender(filterTodos());
+  }, [filterType, todosData]);
 
   const handleOnKeyPress = (e) => {
     if (e.key == "Enter" && e.target.value.trim()) {
