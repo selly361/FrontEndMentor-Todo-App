@@ -7,7 +7,8 @@
   --completed-text-color: hsl(233, 14%, 35%);
   --color-text: hsl(235, 16%, 43%);
   --box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.5);
-  --header-bg-image: url("./assets/images/bg-desktop-dark.jpg")
+  --header-bg-image: url("./assets/images/bg-desktop-dark.jpg");
+  --normal-text-color: rgb(255, 255, 255);
 }
 
 :root[data-theme="light"] {
@@ -18,7 +19,8 @@
   --color-text-completed: hsl(233, 11%, 84%);
   --color-text: hsl(235, 9%, 61%);
   --box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
-  --header-bg-image: url("./assets/images/bg-desktop-light.jpg")
+  --header-bg-image: url("./assets/images/bg-desktop-light.jpg");
+  --normal-text-color: rgb(0, 0, 0);
 }
 
 
@@ -27,16 +29,19 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Josefin Sans', sans-serif;
+
+
 }
 
 
 body {
-  transition: background 1s ease;
   width: 100vw;
   height: 100vh;
   background-color: var(---bg-color);
   background-image: var(--header-bg-image);
   background-repeat: no-repeat;
+  overflow-x: hidden;
+  transition: 1s ease;
+  transition-property: background-color background-image;
 }
-
 

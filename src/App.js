@@ -1,12 +1,14 @@
-import TodoHeader from "./components/TodoStuff/TodoHeader/TodoHeader";
+import { Fragment } from "react";
+import Todos from "./components/TodoStuff/Todos/Todos";
+
 
 
 
 function App() {
   return (
-    <div>
-      <TodoHeader />
-    </div>
+    <Fragment>
+      <Todos />
+    </Fragment>
     );
 }
 

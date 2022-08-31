@@ -5,17 +5,11 @@ import "./todo-header.styles.scss";
 
 const TodoHeader = () => {
   let defaultTheme = () => {
-    let savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
-      return savedTheme;
+    if (localStorage.getItem("theme")) {
+      return localStorage.getItem("theme");
     } else {
-      let preferableTheme = window.matchMedia("(prefers-color-scheme: dark)")
-        .matches
-        ? "dark"
-        : "light";
-
-      localStorage.setItem("theme", preferableTheme);
-      return preferableTheme;
+      localStorage.setItem("theme", "dark");
+      return "dark";
     }
   };
   const [theme, setTheme] = useState(defaultTheme());
