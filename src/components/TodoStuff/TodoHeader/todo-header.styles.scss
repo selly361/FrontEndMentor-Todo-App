@@ -9,4 +9,20 @@
         letter-spacing: 1rem;
         font-weight: bold;
     }
+
+    .theme-toggle {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        transition: transform 1s;
+        &:active {
+        border: none;
+
+        }
+
+        &:hover {
+            transform: scale(1.2);
+        }
+
+    }
 }

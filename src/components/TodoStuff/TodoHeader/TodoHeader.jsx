@@ -25,11 +25,13 @@ const TodoHeader = () => {
   return (
     <div className="todo-header">
       <h2>TODO</h2>
-      {theme == "dark" ? (
-        <SunIcon onClick={handleThemeSwitch} />
-      ) : (
-        <MonnIcon onClick={handleThemeSwitch} />
-      )}
+      <button className="theme-toggle">
+        {theme == "dark" ? (
+          <SunIcon onClick={handleThemeSwitch} />
+        ) : (
+          <MonnIcon onClick={handleThemeSwitch} />
+        )}
+      </button>
     </div>
   );
 };

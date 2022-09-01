@@ -53,6 +53,10 @@ const Todos = () => {
     setTodosData(uncompletedTodos);
   };
 
+
+
+  let clickedArr = [true, false, false]
+
   return (
     <div className="Todos">
       <TodoHeader />
@@ -78,9 +82,9 @@ const Todos = () => {
             {todosData.filter((todo) => !todo.completed).length} items left
           </h3>
           <div className="filter-container">
-            <h4 onClick={(e) => setFilterType("all")}>All</h4>
-            <h4 onClick={(e) => setFilterType("active")}>Active</h4>
-            <h4 onClick={(e) => setFilterType("completed")}>Completed</h4>
+            <h4 className={filterType === "all" ? "active" : ""} onClick={(e) => setFilterType("all")}>All</h4>
+            <h4 className={filterType === "active" ? "active" : ""} onClick={(e) => setFilterType("active")}>Active</h4>
+            <h4 className={filterType === "completed" ? "active" : ""} onClick={(e) => setFilterType("completed")}>Completed</h4>
           </div>
           <div onClick={handleClearCompleted}>
             <h3>Clear Completed</h3>

@@ -8,6 +8,7 @@
   --color-text: hsl(235, 16%, 43%);
   --box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.5);
   --header-bg-image: url("./assets/images/bg-desktop-dark.jpg");
+  --header-bg-image-mobile: url("./assets/images/bg-mobile-dark.jpg");
   --normal-text-color: rgb(255, 255, 255);
 }
 
@@ -20,6 +21,7 @@
   --color-text: hsl(235, 9%, 61%);
   --box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
   --header-bg-image: url("./assets/images/bg-desktop-light.jpg");
+  --header-bg-image-mobile: url("./assets/images/bg-mobile-light.jpg");
   --normal-text-color: rgb(0, 0, 0);
 }
 
@@ -40,7 +42,19 @@ body {
   background-color: var(---bg-color);
   background-image: var(--header-bg-image);
   background-repeat: no-repeat;
+  background-size: 100vw;
   overflow-x: hidden;
   transition: 1s ease;
   transition-property: background-color background-image;
+}
+
+
+@media (max-width: 700px){
+  body {
+    background-image: var(--header-bg-image-mobile);
+  }
+
+  html {
+    font-size: 12px;
+  }
 }

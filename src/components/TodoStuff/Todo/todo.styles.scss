@@ -16,12 +16,13 @@
     border-bottom: 1px solid var(--color-border);
 
     .cross-icon {
-        display: none;
+        transition: opacity 500ms;
+        opacity: 0;
         cursor: pointer;
     }
 
     &:hover .cross-icon {
-        display: initial;
+        opacity: 1;
     }
 
     span:first-child {
@@ -44,6 +45,7 @@
 
     .completed, .uncompleted {
         height: 30px;
+        transition: border 1s;
         width: 30px;
         border-radius: 50%;
         border: 1px solid var(--color-border);
