@@ -7,11 +7,35 @@ import Todo from "../Todo/Todo";
 const Todos = () => {
   let savedTodos = JSON.parse(localStorage.getItem("todos")) || [
     {
-      todo: "Do one front end mentor challenge :)",
-      completed: true,
-      id: uuid(),
+        todo: 'Complete online JavaScript course',
+        completed: true,
+        id: 0
     },
-  ];
+    {
+        todo: 'Jog around the park 3x',
+        completed: false,
+        id: 1
+    },
+    {
+        todo: '10 minutes meditation',
+        completed: false,
+        id: 2
+    },
+    {
+        todo: 'Read for 1 hour',
+        completed: false,
+        id: 3
+    },
+    {
+        todo: 'Pick up groceries',
+        completed: false,
+        id: 4
+    },
+    {
+        todo: 'Complete Todo App on Frontend Mentor',
+        completed: false,
+        id: 5
+    }]
 
   const [todosData, setTodosData] = useState(savedTodos);
   const [todosToRender, setTodosToRender] = useState(todosData);
